@@ -11,13 +11,18 @@ Cambridge CB3 0HE
 Email: mg719@cam.ac.uk
 """
 
+
+from __future__ import print_function, division, absolute_import
+
+#::: modules
 import numpy as np
 from astropy.stats import sigma_clip
 import timeit
 
-from utils import medsig
-from binning import binning1D_per_night
-import index_transits
+#::: lichtkurven modules
+from .utils import medsig
+from .binning import binning1D_per_night
+from . import index_transits
 
 
 

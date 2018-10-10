@@ -11,10 +11,14 @@ Cambridge CB3 0HE
 Email: mg719@cam.ac.uk
 """
 
+from __future__ import print_function, division, absolute_import
 
-
+#::: modules
 import numpy as np
-from utils import mask_ranges
+
+#::: lichtkurven modules
+from .utils import mask_ranges
+
 
 
 
