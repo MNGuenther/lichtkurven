@@ -11,7 +11,6 @@ Cambridge CB3 0HE
 Email: mg719@cam.ac.uk
 """
 
-
 from __future__ import print_function, division, absolute_import
 
 #::: modules
@@ -250,7 +249,7 @@ def plot_binned_lightcurve(ax, time, f, ferr=np.nan, bin_time=0, show_transit_re
         #or Ed's binning method (SLOW!) (bin_time required in units of hjd, i.e. here in days)
 #        time, f, ferr  = rebin_err(time, f, ferr=None, dt = bin_time/(24. * 3600.), ferr_type='medsig', ferr_style='std')
         stop = timeit.default_timer()
-        if debug: print 'Binning succesfully created in', stop-start, 's.'
+        if debug: print('Binning succesfully created in', stop-start, 's.')
 
     
     start = timeit.default_timer()    
@@ -260,13 +259,13 @@ def plot_binned_lightcurve(ax, time, f, ferr=np.nan, bin_time=0, show_transit_re
     ax.set_xlabel( 'HJD' )
     ax.set_xlim([ np.int(np.min(time))-1, np.int(np.max(time))+1 ])
     stop = timeit.default_timer()
-    if debug: print 'Scatter succesfully created in', stop-start, 's.'
+    if debug: print('Scatter succesfully created in', stop-start, 's.')
 
     start = timeit.default_timer() 
     for i in np.arange( np.int(time[0]), np.int(time[-1])+1 ): 
         ax.axvline(i, color='lightgrey', zorder=-2)
     stop = timeit.default_timer()
-    if debug: print 'Lines succesfully created in', stop-start, 's.'
+    if debug: print('Lines succesfully created in', stop-start, 's.')
     
     
     start = timeit.default_timer() 
@@ -280,7 +279,7 @@ def plot_binned_lightcurve(ax, time, f, ferr=np.nan, bin_time=0, show_transit_re
             T_ingress = j*period + ( epoch - (width/2.) )
             T_egress = j*period + ( epoch + (width/2.) )
     stop = timeit.default_timer()
-    if debug: print 'Greens succesfully created in', stop-start, 's.'
+    if debug: print('Greens succesfully created in', stop-start, 's.')
 
  
  

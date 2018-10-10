@@ -75,7 +75,7 @@ def index_eclipses(dic, obj_nr=None):
     
     
     if obj_nr is not None:
-        print 'Not currently implemented.'
+        print('Not currently implemented.')
         return None
 
 
